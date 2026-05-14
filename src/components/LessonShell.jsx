@@ -86,10 +86,9 @@ export default function LessonShell({
 
       {/* Card area */}
       <div className="flex-1 relative overflow-hidden">
-        <AnimatePresence mode="wait" custom={direction}>
+        <AnimatePresence mode="wait">
           <motion.div
             key={currentExercise.id}
-            custom={direction}
             variants={CARD_VARIANTS}
             initial="enter"
             animate="center"
