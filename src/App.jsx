@@ -16,29 +16,18 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FAF7F2] max-w-md mx-auto relative overflow-x-hidden">
       <AnimatePresence mode="wait">
-        {state.screen === 'start' && (
-          <motion.div
-            key="start"
-            variants={SCREEN_VARIANTS}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.25 }}
-          >
+        <motion.div
+          key={state.screen}
+          variants={SCREEN_VARIANTS}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.22, ease: 'easeInOut' }}
+        >
+          {state.screen === 'start' && (
             <StartScreen onStart={state.startLesson} streak={state.streak} />
-          </motion.div>
-        )}
-
-        {state.screen === 'lesson' && (
-          <motion.div
-            key="lesson"
-            variants={SCREEN_VARIANTS}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.25 }}
-            className="min-h-screen"
-          >
+          )}
+          {state.screen === 'lesson' && (
             <LessonShell
               currentIndex={state.currentIndex}
               currentExercise={state.currentExercise}
@@ -52,26 +41,16 @@ export default function App() {
               onResetRetry={state.resetRetry}
               onExit={state.restartLesson}
             />
-          </motion.div>
-        )}
-
-        {state.screen === 'complete' && (
-          <motion.div
-            key="complete"
-            variants={SCREEN_VARIANTS}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.25 }}
-          >
+          )}
+          {state.screen === 'complete' && (
             <CompleteScreen
               xp={state.xp}
               streak={state.streak}
               confidenceScores={state.confidenceScores}
               onRestart={state.restartLesson}
             />
-          </motion.div>
-        )}
+          )}
+        </motion.div>
       </AnimatePresence>
     </div>
   )
