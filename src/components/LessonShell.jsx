@@ -22,16 +22,15 @@ export default function LessonShell({
   onConfidence,
   onAdvance,
   onResetRetry,
+  onAdvanceSilent,
   onExit,
 }) {
-  const [direction, setDirection] = useState(1)
+  const [retryCount, setRetryCount] = useState(0)
 
-  const handleAdvance = () => {
-    setDirection(1)
-    onAdvance()
-  }
+  const handleAdvance = () => onAdvance()
 
   const handleRetry = () => {
+    setRetryCount(c => c + 1)
     onResetRetry()
   }
 
@@ -41,7 +40,7 @@ export default function LessonShell({
         return (
           <MirrorCueCard
             exercise={currentExercise}
-            onContinue={onCorrect}
+            onContinue={onAdvanceSilent}
           />
         )
       case 'listen_repeat':
@@ -54,6 +53,7 @@ export default function LessonShell({
       case 'word_select':
         return (
           <WordSelectCard
+            key={`${currentExercise.id}-${retryCount}`}
             exercise={currentExercise}
             onCorrect={onCorrect}
             onRetry={onRetry}

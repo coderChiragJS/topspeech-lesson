@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const CONFIDENCE_OPTIONS = [
@@ -11,7 +11,6 @@ export default function ListenRepeatCard({ exercise, onConfidence }) {
   const [didSayIt, setDidSayIt] = useState(false)
   const [selectedConfidence, setSelectedConfidence] = useState(null)
   const [isAnimatingWord, setIsAnimatingWord] = useState(false)
-  const buttonRef = useRef(null)
 
   const handleSayIt = () => {
     setIsAnimatingWord(true)
@@ -98,7 +97,6 @@ export default function ListenRepeatCard({ exercise, onConfidence }) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            ref={buttonRef}
             onClick={handleSayIt}
             className="w-full py-4 rounded-2xl bg-[#2B8A6E] text-white font-bold text-base flex items-center justify-center gap-2.5 shadow active:scale-[0.97] transition-transform"
           >

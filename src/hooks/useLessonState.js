@@ -45,6 +45,17 @@ export function useLessonState() {
     }
   }, [currentIndex, totalCards])
 
+  const advanceSilent = useCallback(() => {
+    setXp(prev => prev + lesson.xpPerCard)
+    const nextIndex = currentIndex + 1
+    if (nextIndex >= totalCards) {
+      setScreen('complete')
+    } else {
+      setCurrentIndex(nextIndex)
+      setPhase('answering')
+    }
+  }, [currentIndex, totalCards])
+
   const resetRetry = useCallback(() => {
     setPhase('answering')
   }, [])
@@ -71,6 +82,7 @@ export function useLessonState() {
     handleRetry,
     handleConfidence,
     advance,
+    advanceSilent,
     resetRetry,
     restartLesson,
   }

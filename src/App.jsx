@@ -48,6 +48,7 @@ export default function App() {
               onRetry={state.handleRetry}
               onConfidence={state.handleConfidence}
               onAdvance={state.advance}
+              onAdvanceSilent={state.advanceSilent}
               onResetRetry={state.resetRetry}
               onExit={state.restartLesson}
             />
