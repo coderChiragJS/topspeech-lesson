@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const CONFIDENCE_OPTIONS = [
   { value: 1, emoji: '😟', label: 'Needed work', color: 'border-[#FCA5A5] bg-[#FEF2F2]', activeColor: 'border-[#EF4444] bg-[#FEE2E2]', textColor: 'text-[#991B1B]' },
   { value: 2, emoji: '🙂', label: 'Getting there', color: 'border-[#FCD34D] bg-[#FFFBEB]', activeColor: 'border-[#F59E0B] bg-[#FEF3C7]', textColor: 'text-[#92400E]' },
-  { value: 3, emoji: '🎯', label: 'Nailed it!', color: 'border-[#6EE7B7] bg-[#ECFDF5]', activeColor: 'border-[#2B8A6E] bg-[#D1FAE5]', textColor: 'text-[#065F46]' },
+  { value: 3, emoji: '🎯', label: 'Nailed it!', color: 'border-[#6EE7B7] bg-[#EEF2FF]', activeColor: 'border-[#5B4FCF] bg-[#E0E7FF]', textColor: 'text-[#2D1B8E]' },
 ]
 
 export default function ListenRepeatCard({ exercise, onConfidence }) {
@@ -30,10 +30,10 @@ export default function ListenRepeatCard({ exercise, onConfidence }) {
     let i = 0
     while (i < word.length) {
       if (word[i].toLowerCase() === 'r') {
-        parts.push(<span key={i} className="text-[#2B8A6E] relative">
+        parts.push(<span key={i} className="text-[#5B4FCF] relative">
           {word[i]}
           <motion.span
-            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#2B8A6E] rounded-full"
+            className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#5B4FCF] rounded-full"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.3, duration: 0.3 }}
@@ -51,7 +51,7 @@ export default function ListenRepeatCard({ exercise, onConfidence }) {
     <div className="flex flex-col flex-1 px-5 py-6 gap-5">
       {/* Header */}
       <div>
-        <p className="text-xs font-semibold text-[#2B8A6E] uppercase tracking-widest mb-1">Listen & Repeat</p>
+        <p className="text-xs font-semibold text-[#5B4FCF] uppercase tracking-widest mb-1">Listen & Repeat</p>
         <p className="text-[#6b7280] text-sm leading-relaxed">{exercise.cue}</p>
       </div>
 
@@ -78,7 +78,7 @@ export default function ListenRepeatCard({ exercise, onConfidence }) {
               {[3, 6, 9, 12, 9, 6, 3, 6, 9, 6, 3].map((h, i) => (
                 <motion.div
                   key={i}
-                  className="w-1 bg-[#2B8A6E] rounded-full"
+                  className="w-1 bg-[#5B4FCF] rounded-full"
                   animate={{ height: [h, h * 2.5, h] }}
                   transition={{ duration: 0.4, delay: i * 0.04, repeat: Infinity }}
                   style={{ height: h }}
@@ -98,7 +98,7 @@ export default function ListenRepeatCard({ exercise, onConfidence }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             onClick={handleSayIt}
-            className="w-full py-4 rounded-2xl bg-[#2B8A6E] text-white font-bold text-base flex items-center justify-center gap-2.5 shadow active:scale-[0.97] transition-transform"
+            className="w-full py-4 rounded-2xl bg-[#5B4FCF] text-white font-bold text-base flex items-center justify-center gap-2.5 shadow active:scale-[0.97] transition-transform"
           >
             <span className="text-xl">🎙️</span>
             Say it out loud

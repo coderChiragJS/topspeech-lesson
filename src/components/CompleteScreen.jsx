@@ -5,7 +5,7 @@ import { lesson } from '../data/lesson'
 const CONFIDENCE_LABELS = ['', 'Needed work', 'Getting there', 'Nailed it!']
 const CONFIDENCE_EMOJIS = ['', '😟', '🙂', '🎯']
 const CONFIDENCE_COLORS = ['', '#FCA5A5', '#FCD34D', '#6EE7B7']
-const CONFIDENCE_BG = ['', '#FEF2F2', '#FFFBEB', '#ECFDF5']
+const CONFIDENCE_BG = ['', '#FEF2F2', '#FFFBEB', '#EEF2FF']
 
 function useCountUp(target, duration = 1200) {
   const [count, setCount] = useState(0)
@@ -31,7 +31,7 @@ function Confetti() {
   const pieces = Array.from({ length: 24 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
-    color: ['#2B8A6E', '#F59E0B', '#A78BFA', '#FB7185', '#34D399'][i % 5],
+    color: ['#5B4FCF', '#F59E0B', '#A78BFA', '#FB7185', '#34D399'][i % 5],
     delay: Math.random() * 0.6,
     duration: 1.5 + Math.random() * 1,
     rotate: Math.random() * 720 - 360,
@@ -123,7 +123,7 @@ export default function CompleteScreen({ xp, streak, confidenceScores, onRestart
           {/* Cards done */}
           <div className="bg-white rounded-2xl p-3.5 flex flex-col items-center gap-1 shadow-sm border border-[#F0EDE8]">
             <span className="text-2xl">✅</span>
-            <span className="text-2xl font-black text-[#2B8A6E]">6</span>
+            <span className="text-2xl font-black text-[#5B4FCF]">6</span>
             <span className="text-xs text-[#9ca3af] font-medium">exercises</span>
           </div>
         </motion.div>
@@ -182,11 +182,11 @@ export default function CompleteScreen({ xp, streak, confidenceScores, onRestart
           initial={{ y: 12, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.55 }}
-          className="w-full flex items-center gap-3 bg-[#F0FDF8] rounded-2xl p-4 border border-[#A7F3D0]"
+          className="w-full flex items-center gap-3 bg-[#F5F3FF] rounded-2xl p-4 border border-[#C7D2FE]"
         >
           <span className="text-2xl">📅</span>
           <div>
-            <p className="text-sm font-bold text-[#065F46]">Day 2 unlocks tomorrow</p>
+            <p className="text-sm font-bold text-[#2D1B8E]">Day 2 unlocks tomorrow</p>
             <p className="text-xs text-[#6b7280]">Words with R in the middle position</p>
           </div>
         </motion.div>
@@ -200,13 +200,13 @@ export default function CompleteScreen({ xp, streak, confidenceScores, onRestart
         >
           <button
             onClick={onRestart}
-            className="w-full bg-[#2B8A6E] text-white font-bold text-base py-4 rounded-2xl shadow active:scale-[0.97] transition-transform"
+            className="w-full bg-[#5B4FCF] text-white font-bold text-base py-4 rounded-2xl shadow active:scale-[0.97] transition-transform"
           >
             Practice again
           </button>
           <button
             onClick={onRestart}
-            className="w-full text-[#2B8A6E] font-semibold text-sm py-3 rounded-2xl border border-[#2B8A6E] active:scale-[0.97] transition-transform"
+            className="w-full text-[#5B4FCF] font-semibold text-sm py-3 rounded-2xl border border-[#5B4FCF] active:scale-[0.97] transition-transform"
           >
             Back to home
           </button>

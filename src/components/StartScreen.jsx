@@ -9,7 +9,7 @@ export default function StartScreen({ onStart, streak }) {
           initial={{ scale: 0.7, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-          className="w-20 h-20 rounded-3xl bg-[#2B8A6E] flex items-center justify-center shadow-lg"
+          className="w-20 h-20 rounded-3xl bg-[#5B4FCF] flex items-center justify-center shadow-lg"
         >
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
             <path d="M20 8C13.373 8 8 13.373 8 20s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8z" fill="white" opacity="0.2"/>
@@ -25,7 +25,7 @@ export default function StartScreen({ onStart, streak }) {
           transition={{ delay: 0.15 }}
           className="text-center"
         >
-          <p className="text-[#2B8A6E] font-semibold text-sm tracking-widest uppercase mb-2">TopSpeech Health</p>
+          <p className="text-[#5B4FCF] font-semibold text-sm tracking-widest uppercase mb-2">TopSpeech Health</p>
           <h1 className="text-3xl font-bold text-[#1a1a1a] leading-tight mb-1">The R Sound</h1>
           <p className="text-[#6b7280] text-base">Day 1 · Rhotacism Program</p>
         </motion.div>
@@ -80,7 +80,7 @@ export default function StartScreen({ onStart, streak }) {
       >
         <button
           onClick={onStart}
-          className="w-full bg-[#2B8A6E] text-white font-bold text-lg py-4 rounded-2xl shadow-lg active:scale-[0.97] transition-transform"
+          className="w-full bg-[#5B4FCF] text-white font-bold text-lg py-4 rounded-2xl shadow-lg active:scale-[0.97] transition-transform"
         >
           Start Today's Lesson
         </button>

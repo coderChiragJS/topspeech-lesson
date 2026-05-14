@@ -14,7 +14,7 @@ export default defineConfig({
         name: 'TopSpeech — Daily Lesson',
         short_name: 'TopSpeech',
         description: 'Your daily speech therapy lesson',
-        theme_color: '#2B8A6E',
+        theme_color: '#5B4FCF',
         background_color: '#FAF7F2',
         display: 'standalone',
         orientation: 'portrait',

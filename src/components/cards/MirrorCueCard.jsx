@@ -5,7 +5,7 @@ export default function MirrorCueCard({ exercise, onContinue }) {
     <div className="flex flex-col flex-1 px-5 py-6 gap-6">
       {/* Header */}
       <div>
-        <p className="text-xs font-semibold text-[#2B8A6E] uppercase tracking-widest mb-1">Mouth Position</p>
+        <p className="text-xs font-semibold text-[#5B4FCF] uppercase tracking-widest mb-1">Mouth Position</p>
         <h2 className="text-2xl font-bold text-[#1a1a1a] leading-tight">{exercise.title}</h2>
       </div>
 
@@ -40,10 +40,10 @@ export default function MirrorCueCard({ exercise, onContinue }) {
           initial={{ y: 8, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex items-start gap-2.5 bg-[#F0FDF8] rounded-xl p-3.5 border border-[#A7F3D0]"
+          className="flex items-start gap-2.5 bg-[#F5F3FF] rounded-xl p-3.5 border border-[#C7D2FE]"
         >
           <span className="text-lg mt-0.5">💡</span>
-          <p className="text-sm text-[#065F46] font-medium">{exercise.tip}</p>
+          <p className="text-sm text-[#2D1B8E] font-medium">{exercise.tip}</p>
         </motion.div>
       )}
 
@@ -56,7 +56,7 @@ export default function MirrorCueCard({ exercise, onContinue }) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
         onClick={onContinue}
-        className="w-full bg-[#2B8A6E] text-white font-bold text-base py-4 rounded-2xl shadow active:scale-[0.97] transition-transform"
+        className="w-full bg-[#5B4FCF] text-white font-bold text-base py-4 rounded-2xl shadow active:scale-[0.97] transition-transform"
       >
         {exercise.ctaLabel || 'Got it, continue'}
       </motion.button>
@@ -106,7 +106,7 @@ function MouthDiagram() {
       {/* Animated arrow showing tongue curl direction */}
       <motion.path
         d="M115 108 Q122 100 118 93"
-        stroke="#2B8A6E"
+        stroke="#5B4FCF"
         strokeWidth="2"
         strokeLinecap="round"
         strokeDasharray="4 3"
@@ -116,7 +116,7 @@ function MouthDiagram() {
       />
       <motion.path
         d="M118 93 L121 99 L114 97"
-        stroke="#2B8A6E"
+        stroke="#5B4FCF"
         strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -127,11 +127,11 @@ function MouthDiagram() {
       />
 
       {/* Label */}
-      <text x="128" y="91" fontSize="9" fill="#2B8A6E" fontFamily="Inter, sans-serif" fontWeight="600">curl up</text>
+      <text x="128" y="91" fontSize="9" fill="#5B4FCF" fontFamily="Inter, sans-serif" fontWeight="600">curl up</text>
 
       {/* Palate ridge dot */}
-      <circle cx="100" cy="90" r="3.5" fill="#2B8A6E" opacity="0.6"/>
-      <text x="107" y="89" fontSize="8.5" fill="#2B8A6E" fontFamily="Inter, sans-serif" opacity="0.8">ridge</text>
+      <circle cx="100" cy="90" r="3.5" fill="#5B4FCF" opacity="0.6"/>
+      <text x="107" y="89" fontSize="8.5" fill="#5B4FCF" fontFamily="Inter, sans-serif" opacity="0.8">ridge</text>
     </svg>
   )
 }

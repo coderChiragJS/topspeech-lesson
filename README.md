@@ -1,6 +1,6 @@
 # TopSpeech Health — Daily Lesson Experience
 
-**Live demo:** *(add Vercel URL after deployment)*
+**Live demo:** https://topspeech-lesson.vercel.app
 **Assignment:** TopSpeech Health Engineer Take-Home
 
 ---

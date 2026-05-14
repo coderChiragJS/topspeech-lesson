@@ -14,13 +14,13 @@ export default function FeedbackBar({ phase, exercise, onContinue, onRetry }) {
           exit={{ y: '100%', opacity: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           className={`w-full px-5 pt-5 pb-8 rounded-t-3xl ${
-            isCorrect ? 'bg-[#ECFDF5]' : 'bg-[#FFFBEB]'
+            isCorrect ? 'bg-[#EEF2FF]' : 'bg-[#FFFBEB]'
           }`}
         >
           <div className="max-w-sm mx-auto flex flex-col gap-4">
             <div className="flex items-start gap-3">
               <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 ${
-                isCorrect ? 'bg-[#2B8A6E]' : 'bg-[#D97706]'
+                isCorrect ? 'bg-[#5B4FCF]' : 'bg-[#D97706]'
               }`}>
                 {isCorrect ? (
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -34,7 +34,7 @@ export default function FeedbackBar({ phase, exercise, onContinue, onRetry }) {
                 )}
               </div>
               <div>
-                <p className={`font-bold text-base ${isCorrect ? 'text-[#065F46]' : 'text-[#92400E]'}`}>
+                <p className={`font-bold text-base ${isCorrect ? 'text-[#2D1B8E]' : 'text-[#92400E]'}`}>
                   {isCorrect ? 'Great work!' : 'Almost there!'}
                 </p>
                 {isRetry && exercise?.explanation && (
@@ -55,7 +55,7 @@ export default function FeedbackBar({ phase, exercise, onContinue, onRetry }) {
               <button
                 onClick={onContinue}
                 className={`flex-1 py-3.5 rounded-xl font-semibold text-sm text-white active:scale-[0.97] transition-transform ${
-                  isCorrect ? 'bg-[#2B8A6E]' : 'bg-[#D97706]'
+                  isCorrect ? 'bg-[#5B4FCF]' : 'bg-[#D97706]'
                 }`}
               >
                 Continue

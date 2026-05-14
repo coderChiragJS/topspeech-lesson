@@ -15,7 +15,7 @@ export default function ProgressBar({ current, total }) {
             className="flex-1 h-2.5 rounded-full overflow-hidden bg-[#E8E4DE]"
           >
             <motion.div
-              className="h-full rounded-full bg-[#2B8A6E]"
+              className="h-full rounded-full bg-[#5B4FCF]"
               initial={false}
               animate={{ width: filled ? '100%' : active ? '40%' : '0%' }}
               transition={{ duration: 0.4, ease: 'easeOut' }}

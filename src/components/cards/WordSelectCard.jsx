@@ -25,7 +25,7 @@ export default function WordSelectCard({ exercise, onCorrect, onRetry }) {
       return 'border-[#E8E4DE] bg-white text-[#1a1a1a] active:scale-[0.97] active:bg-[#F5F1EC]'
     }
     if (index === exercise.correct) {
-      return 'border-[#2B8A6E] bg-[#ECFDF5] text-[#065F46]'
+      return 'border-[#5B4FCF] bg-[#EEF2FF] text-[#2D1B8E]'
     }
     if (index === selected && index !== exercise.correct) {
       return 'border-[#EF4444] bg-[#FEF2F2] text-[#991B1B]'
@@ -37,7 +37,7 @@ export default function WordSelectCard({ exercise, onCorrect, onRetry }) {
     if (selected === null) return null
     if (index === exercise.correct) {
       return (
-        <div className="w-6 h-6 rounded-full bg-[#2B8A6E] flex items-center justify-center flex-shrink-0">
+        <div className="w-6 h-6 rounded-full bg-[#5B4FCF] flex items-center justify-center flex-shrink-0">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 6.5L5 9.5l5-7" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -60,7 +60,7 @@ export default function WordSelectCard({ exercise, onCorrect, onRetry }) {
     <div className={`flex flex-col flex-1 px-5 py-6 gap-6 ${shake ? 'shake' : ''}`}>
       {/* Header */}
       <div>
-        <p className="text-xs font-semibold text-[#2B8A6E] uppercase tracking-widest mb-1">Word Recognition</p>
+        <p className="text-xs font-semibold text-[#5B4FCF] uppercase tracking-widest mb-1">Word Recognition</p>
         <h2 className="text-xl font-bold text-[#1a1a1a] leading-snug">{exercise.prompt}</h2>
       </div>
 
