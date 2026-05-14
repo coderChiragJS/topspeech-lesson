@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+  <rect width='512' height='512' rx='100' fill='#2B8A6E'/>
+  <circle cx='256' cy='256' r='150' fill='white' opacity='0.15'/>
+  <path d='M180 256 Q210 180 256 200 Q302 180 332 256 Q302 332 256 320 Q210 332 180 256z' fill='white' opacity='0.2'/>
+  <circle cx='256' cy='256' r='45' fill='white'/>
+  <text x='256' y='275' text-anchor='middle' font-size='52' font-weight='bold' fill='#2B8A6E' font-family='Arial'>R</text>
+</svg>
